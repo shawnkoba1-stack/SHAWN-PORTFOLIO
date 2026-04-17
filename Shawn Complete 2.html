@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn Portfolio</title>
+
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#home" class="logo">Shawn.</a>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section class="home" id="home">
+
+    <div class="home-info">
+        <h1>Hi, I'm <span>Shawn Randy C, Rodriguez</span></h1>
+
+        <h2>I am <span id="role" class="typing"></span><span class="cursor">|</span></h2>
+
+        <p>
+            I build modern responsive websites using HTML, CSS. I am a Computer Technology student with a passion for web development and design. I have experience in creating responsive and user-friendly websites that provide an excellent user experience. I am always eager to learn new technologies and improve my skills in the field of web development.
+        </p>
+
+        <div class="btn-sci">
+            <a href="#" class="btn">Download CV</a>
+
+            <div class="sci">
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-img">
+        <div class="img-box">
+            <img src="shawn.jpg" alt="Shawn Photo">
+        </div>
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-img">
+            <img src="PRO PLAYER.jpg" alt="About Me">
+        </div>
+
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+
+            <h3>COMPUTER TECHNOLOGY STUDENT</h3>
+
+            <p>
+                I'm consistent honnor from gr11 to 12 I want to learned more about on how to excell my knowledge and
+                to improve my skills I don't have an experience as a worker or employee.But way back on my SHS I
+                experience an OJT in Cebu Technological University in CAS office my position is working like transfer the
+                paper of file in different department.
+            </p>
+
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+
+    <h2>My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <div class="project-box">
+            <img src="Shawn Portfolio Website.jpg" alt="Portfolio">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio website.</p>
+            <a href="#" class="btn">View</a>
+        </div>
+
+        <div class="project-box">
+            <img src="Calculator.png" alt="Calculator">
+            <h3>Calculator App</h3>
+            <p>Simple calculator using HTML and CSS.</p>
+            <a href="#" class="btn">View</a>
+        </div>
+
+        <div class="project-box">
+            <img src="https://picsum.photos/400/250?random=3" alt="Landing Page">
+            <h3>Landing Page</h3>
+            <p>Modern UI landing page design.</p>
+            <a href="#" class="btn">View</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+    <h2>My <span>Services</span></h2>
+
+    <div class="services-container">
+
+        <div class="service-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Web Development</h3>
+            <p>Responsive and modern websites using HTML, CSS, JS.</p>
+        </div>
+
+        <div class="service-box">
+            <i class='bx bx-paint'></i>
+            <h3>Web Design</h3>
+            <p>Clean UI/UX design for better user experience.</p>
+        </div>
+
+        <div class="service-box">
+            <i class='bx bx-mobile-alt'></i>
+            <h3>Responsive Design</h3>
+            <p>Works perfectly on all devices.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Contact <span>Me</span></h2>
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
+
+</section>
+
+<!-- JS -->
+<script>
+// TEXT ANIMATION
+const roles = ["Web Developer", "Computer Technician", "UI Designer", "Frontend Developer"];
+let index = 0;
+
+
+const roleText = document.getElementById("role");
+
+setInterval(() => {
+    index = (index + 1) % roles.length;
+    roleText.style.opacity = 0;
+
+    setTimeout(() => {
+        roleText.textContent = roles[index];
+        roleText.style.opacity = 1;
+    }, 300);
+
+}, 2000);
+
+// SCROLL ANIMATION
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 200;
+        const height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html> 
