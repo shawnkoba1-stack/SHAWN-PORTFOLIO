@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* BACKGROUND GLOW */
+body::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(#7cf03d, transparent);
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    filter: blur(120px);
+    z-index: -1;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(31, 36, 45, 0.7);
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #7cf03d;
+}
+
+/* ================= HOME ================= */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 9% 0;
+    gap: 40px;
+}
+
+.home-info h1 {
+    font-size: 50px;
+}
+
+.home-info h2 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.home-info p {
+    margin: 15px 0 25px;
+    color: #ccc;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #7cf03d;
+    color: #1f242d;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    border: 2px solid #7cf03d;
+}
+
+/* SOCIAL */
+.btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.sci {
+    margin-left: 20px;
+}
+
+.sci a {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.3s;
+    color: #7cf03d;
+}
+
+.sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+}
+
+/* IMAGE */
+.home-img .img-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #7cf03d;
+    box-shadow: 0 0 25px #7cf03d;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FLOAT ANIMATION */
+.img-box {
+    animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 100px 9%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img img {
+    width: 280px;
+    border-radius: 20px;
+    border: 3px solid #7cf03d;
+}
+
+.about-text h2 {
+    font-size: 36px;
+}
+
+.about-text span {
+    color: #7cf03d;
+}
+
+.about-text p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* ================= PROJECTS ================= */
+.projects {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.projects h2 span {
+    color: #7cf03d;
+}
+
+.projects-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-box {
+    background: #2c3440;
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf03d;
+}
+
+.project-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.project-box h3 {
+    margin: 15px 0;
+    color: #7cf03d;
+}
+
+.project-box p {
+    padding: 0 10px;
+    color: #ccc;
+}
+
+/* ================= SERVICES ================= */
+.services {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.services h2 span {
+    color: #7cf03d;
+}
+
+.services-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background: #2c3440;
+    width: 260px;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf03d;
+}
+
+.service-box i {
+    font-size: 35px;
+    color: #7cf03d;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.contact h2 span {
+    color: #7cf03d;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #2c3440;
+    color: #fff;
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= NIGHT MODE ================= */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #7cf03d;
+    background: none;
+    color: #7cf03d;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background: #7cf03d;
+    color: #1f242d;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light-mode .navbar {
+    background: rgba(255,255,255,0.8);
+}
+
+body.light-mode .project-box,
+body.light-mode .service-box {
+    background: #fff;
+    color: #222;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects-container,
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
